@@ -1,0 +1,21 @@
+{
+  "name": "appexpress",
+  "version": "1.0.0",
+  "description": "servidor API Rest com JavaScript e MySQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "pw2_etapa2"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "mysql",
+    "express"
+  ],
+  "author": "Olga e João",
+  "license": "MIT"
+}
