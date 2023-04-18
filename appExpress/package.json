@@ -4,7 +4,7 @@
   "description": "servidor API Rest com JavaScript e MySQL",
   "main": "index.js",
   "scripts": {
-    "test": "npm start"
+    "test": "node ./index"
   },
   "repository": {
     "type": "git",
@@ -17,5 +17,8 @@
     "express"
   ],
   "author": "Olga e João",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
