@@ -1,31 +1,32 @@
 const express = require('express')
+const { restart } = require('nodemon')
 const app = express()
 const port = 3000
-
 const path = require('path')
+
 const basePath = path.join(__dirname, 'templates')
 
-var checkAuth = function(req, res, next){
-    req.authStatus = true
-    if(req.authStatus){
-        console.log('Está Logado, Prossiga!')
-        next()
-    }
-    else{
-        console.log('Não Logado! Faça o Login!')
-    }
-}
+app.use(
+    express.urlencoded({
+        extended:true,
+}))
 
-app.use(checkAuth)
+app.use(express.json())
 
 app.get('/',(req,res)=>{
     res.sendFile(`${basePath}/index.html`)
 })
 
-app.get ('/user/:id', (req,res) =>{
-    let emailUser= req.params.id+"@gmail.com"
-    console.log( `parametro de usuario:${emailUser}`)
-res.sendFile(`${basePath}/user.html`)
+app.get('/user/add', (req,res)=>{
+    res.sendFile(`${basePath}/userForm.html`)
+})
+
+app.post('/users/save', (req,res)=>{
+    let name = req.body.name
+    let age = req.body.age
+    
+    console.log(`Node do usuario: ${name}, Idade do usuario: ${age}`)
+    restart.sendFile(`${basePath}/index.html`)
 })
 
 app.listen(port, () => {
