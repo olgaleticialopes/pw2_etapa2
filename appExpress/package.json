@@ -1,15 +1,15 @@
 {
   "name": "appexpress",
   "version": "1.0.0",
-  "description": "servidor API Rest com JavaScript e MySQL",
+  "description": "servidor API Rest com Javascript e MySQL",
   "main": "index.js",
   "scripts": {
     "test": "node ./index",
-    "dev":"nodemon"
+    "dev":"nodemon ./index"
   },
   "repository": {
     "type": "git",
-    "url": "pw2_etapa2"
+    "url": "pw2_etapa2_a"
   },
   "keywords": [
     "node",
@@ -17,7 +17,7 @@
     "mysql",
     "express"
   ],
-  "author": "Olga e João",
+  "author": "Victor Sena Icoma",
   "license": "MIT",
   "dependencies": {
     "express": "^4.18.2",
